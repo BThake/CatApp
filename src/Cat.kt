@@ -1,6 +1,6 @@
 class Cat (val name: String, var age: Int, var weight: Int) {
 
-    fun walk(distance: Int) : Boolean
+    fun walk(distance : Int) : Boolean
     {
         if(weight - distance >= 5) {
             weight -= distance
@@ -9,9 +9,9 @@ class Cat (val name: String, var age: Int, var weight: Int) {
         return false
     }
 
-    fun eat() : Boolean {
-        if(weight < 20) {
-            weight ++
+    fun eat(amount : Int) : Boolean {
+        if(weight + amount < 20) {
+            weight += amount
             return true
         }
         else {
